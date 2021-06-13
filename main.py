@@ -42,6 +42,12 @@ def main():
 
     create_tree(node_ids, edges, leaves, number_of_chars)
 
+    minimum_parsimony = 0
+    for position in range(number_of_chars):
+        minimum_parsimony += small_parsimony(position)
+
+    print(minimum_parsimony)
+
 
 def create_tree(node_ids, edges, leaves, number_of_chars):
     global tree
